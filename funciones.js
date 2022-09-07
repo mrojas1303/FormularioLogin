@@ -1,10 +1,21 @@
+var usuarioRegistrado = "martincommisso@hotmail.com";
+var passwordRegistrada = "123456";
+
 function validarContraseña (){
     let contraseña1 = document.getElementById('ingresoContraseña').value;
     let contraseña2 = document.getElementById('repitoContraseña').value;
     if (contraseña1!=null){
-        if(contraseña1!=contraseña2)
-        alert("Las contraseñas no son iguales");
-    } else return true;
+        if(contraseña1==contraseña2)
+       return true;
+    }
+}
+
+function validarUsuario(){
+    let usuario = document.getElementById('ingresarUsuario').value;
+    let password = document.getElementById('ingresarPassword').value;
+    if(usuario==usuarioRegistrado && passwordRegistrada==password)
+    return alert("Ingreso exitoso");
+    else alert("Usuario o contraseña invalida");
 }
 
 function mostrarRegistro (){
@@ -17,17 +28,10 @@ function mostrarFormulario(){
     document.getElementById('contenedor-formulario').style.visibility="visible";
 }
 
-function validarCampos(){
-    if(document.querySelectorAll('input[type="text"]').values!=null)
-    return true;
-    else alert("Falta completar campos");
-}
-
-
 function registrado(){
-    document.getElementById('boton-aceptar');
-    validarCampos();
-    if(validarContraseña()){
-    alert("Usuario registrado");
-    mostrarFormulario();}
+   if(validarContraseña()){
+   alert("Usuario registrado");
+   mostrarFormulario();}
+   else alert("Contraseña no coincide");
+ 
 }
