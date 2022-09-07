@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funciones.js"></script>
+    <title>Pagina de registro</title>
+</head>
+<body>
+    <div id="contenedor-formulario">
+    <img src="logo.jpeg" alt="" class="logo">
+    <br>
+    <label for="">Ingrese su usuario</label>
+    <input type="text" class="ingreso" placeholder="nombre@example.com">
+    <br>
+    <label for="">Ingrese su contraseña</label>
+    <input type="password" class="ingreso" placeholder="contraseña">
+    <br>
+    <button class="botones">Ingresar</button>
+    <br>
+    <button class="botones" onclick="mostrarRegistro()">Registrarse</button>
+    </div>
+    
+
+    <div id="contenedor-registro" style="visibility:hidden">
+        <h1>Formulario de Registro</h1>
+
+        <label for="">Ingrese su usuario</label>
+        <input type="text" class="ingreso" placeholder=>
+        <br>
+        <label for="">Ingrese su contraseña</label>
+        <input type="password" id="ingresoContraseña">
+        <br>
+        <label for="">Repita contraseña</label>
+        <input type="password" id="repitoContraseña">
+        <br>
+        <label for="">Apellido</label>
+        <input type="text" class="ingreso" placeholder=>
+        <br>
+        <label for="">Nombre</label>
+        <input type="text" class="ingreso" placeholder=>
+        <br>
+        <label for="">Edad</label>
+        <input type="number" class="ingreso" placeholder=>
+        <br>
+        <label for="cars">Selecciona tu profesion</label>
+        <select name="profesiones">
+        <option value="Analista de sistemas">Analista de sistemas</option>
+        <option value="Profesor de educacion fisica">Profesor de educacion fisica</option>
+        <option value="Policia">Policia</option>
+        <option value="Mago">Mago</option>
+        </select>
+        <br>
+        <button id="boton-aceptar" onclick="registrado()">Aceptar</button>
+        <br>
+        <button id="boton-cancelar">Cancelar</button>
+        </div>
+</body>
+</html>
